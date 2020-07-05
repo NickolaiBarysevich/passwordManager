@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  db:
+    image: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: pvault
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_PASSWORD: bmUYo4s3!
+    volumes:
+      - ~/docker/volumes/postgres:/var/lib/postgresql
+    ports:
+      - 5432:5432
+  app:
+    build: .
+    ports:
+      - 8080:8080
+      - 443:443
+    links:
+      - db
+    environment:
+      AES_KEY: "*eV#^3qGvQZ=7LKjEnZqQJkREr-8t9Sk"
