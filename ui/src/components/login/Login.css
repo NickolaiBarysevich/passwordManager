@@ -1,0 +1,80 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 1;
+    min-height: 100vh
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #61dafb;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+}
+
+.login-form > label {
+    padding: 1rem 0 0 0 ;
+}
+
+label > input {
+    border-radius: 3px;
+    border: 1px solid #424242;
+    font-size: 20px;
+}
+
+.submit-btn {
+    margin: 1rem;
+    font-size: 22px;
+    background: transparent;
+    border: 2px solid #00a5d2;
+    border-radius: 4px;
+    transition: 300ms;
+}
+
+.submit-btn:hover {
+    background-color: #00a5d2;
+    color: white;
+}
+
+.submit-btn:active {
+    color: #424242;
+    transition: none;
+}
+
+.login-btn-group {
+    display: flex;
+    align-items: baseline;
+}
+
+.registration-btn {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #424242;
+    transition: 400ms;
+}
+
+.registration-btn:hover {
+    font-size: 22px;
+    border-bottom: 2px solid #61dafb;
+}
+
+.registration-btn:active {
+    font-size: 22px;
+    border-bottom: 2px solid #424242;
+    color: #61dafb;
+    transition: none;
+}
+
+.error-message {
+    background-color: #ff8585;
+    border: 2px solid #ff4040;
+    padding: 0.3rem 0;
+    min-width: 241px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+}
